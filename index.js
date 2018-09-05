@@ -56,10 +56,6 @@ function HDWalletProvider (privateKeys, providerUrl) {
   this.engine.start() // Required by the provider engine.
 }
 
-HDWalletProvider.prototype.sendAsync = function () {
-  this.engine.sendAsync.apply(this.engine, arguments)
-}
-
 HDWalletProvider.prototype.send = function () {
   return this.engine.send.apply(this.engine, arguments)
 }
